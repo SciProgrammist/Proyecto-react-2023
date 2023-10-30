@@ -6,11 +6,14 @@
 // El UseEffect se usa para cuando el componente se contruira.
 
 import { useEffect, useState } from "react"
+//Para agregar esta libreria a nuestro proyecto se usa: yarn add react-router-dom@6
+//Para agregar esta libreria a nuestro proyecto usamos: yarn add axios;
 import axios from "axios"
-import "./App.css"
-import Cripto from "./Cripto";
+import "./Cuadricula.css"
+import Cripto from "./cripto/Cripto.jsx";
 
-function App() {
+
+function Cuadricula() {
 
   // Constante que almacena las variables de entorno para el manejo de urls.
   const API_URL = import.meta.env.VITE_API_URL;
@@ -45,6 +48,7 @@ function App() {
 
   return (
     <div className="app-container">
+     
       <h1>Lista de criptomonedas</h1>
            {/*En JSX se puede usar JavaScrip para hacer la parte de diseño de tablas.*/}
           <div className="cripto-container">
@@ -55,7 +59,10 @@ function App() {
               name={name}
               priceUSD={priceUsd} 
               symbol={symbol} 
-              changePercent24Hr={changePercent24Hr}/>
+              changePercent24Hr={changePercent24Hr}
+              id={id}
+              />
+
             ))
           }
       </div>
@@ -64,4 +71,4 @@ function App() {
   )
 }
 
-export default App
+export default Cuadricula
