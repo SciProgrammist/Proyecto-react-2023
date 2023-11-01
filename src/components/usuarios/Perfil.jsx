@@ -1,16 +1,18 @@
 import { useContext } from "react";
-import { UserContextProvider } from "../../context/UserContext";
+import { UserContext } from "../../context/UserContext";
+import "./Perfil.css"
 
 const Perfil = () => {
 
     const usuario = useContext(UserContext);
 
     return (
-        <div>
-            <div>Perfil del Ingeniero Reyes.</div>
-            <div>
-                Usuario desde: 2023
-            </div>
+        <div className="perfil-usuario">
+            <h3>Perfil del {usuario.name}</h3>
+            <h4>Soy un ingeniero apasionado por la tecnologia</h4>
+            <h5>
+                Usuario desde: {usuario.registered}
+            </h5>
         </div>
     )
 }

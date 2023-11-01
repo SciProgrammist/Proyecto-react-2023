@@ -1,11 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import "./Menu.css";
-import { useContext, useEffect, useState } from "react";
+import { useContext} from "react";
 import { UserContext } from "../../context/UserContext";
 const Menu = () => {
 
 
     const usuario = useContext(UserContext);
+
     return (
        <nav className="main-menu">
         <ul>

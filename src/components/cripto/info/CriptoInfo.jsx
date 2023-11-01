@@ -1,7 +1,7 @@
-import {parseFloatNumber} from "../../../helpers/numbers.js"
+import {parseFloatNumber} from "../../../helpers/numbers"
+
 const CriptoInfo = ({cripto}) => {
-  
-    return (
+  return (
     <div className="info">
       <div className="main-info">
         <span>Ranking: {cripto.rank}</span>
@@ -16,7 +16,7 @@ const CriptoInfo = ({cripto}) => {
             <span>{parseFloatNumber(cripto.priceUsd, 3)}</span>
           </li>
           <li className="detail">
-            <span className="label">MaxSuply:
+            <span className="label">MaxSupply:
             </span>
             <span>{parseFloatNumber(cripto.maxSupply, 3)}</span>
           </li>
@@ -31,12 +31,12 @@ const CriptoInfo = ({cripto}) => {
             <span>{parseFloatNumber(cripto.volumeUsd24Hr, 3)}</span>
           </li>
           <li className="detail">
-            <span className="label">Variacion (24 Hrs.):
+            <span className="label">Variación (24 Hrs.):
             </span>
             <span>{parseFloatNumber(cripto.changePercent24Hr, 3)}</span>
           </li>
           <li className="detail">
-            <span className="label">Vwap 24 Hrs:
+            <span className="label">Vwap 24 Hrs.:
             </span>
             <span>{parseFloatNumber(cripto.vwap24Hr, 3)}</span>
           </li>
@@ -44,7 +44,6 @@ const CriptoInfo = ({cripto}) => {
       </div>
     </div>
   )
-
 }
 
-export default CriptoInfo;
+export default CriptoInfo

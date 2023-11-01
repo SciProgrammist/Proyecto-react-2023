@@ -7,6 +7,7 @@
   
   .cripto-page-container .info {
     position: fixed;
+    padding-left: 1.5rem;
   }
   
   .cripto-page-container .history {

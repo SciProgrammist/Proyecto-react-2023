@@ -76,8 +76,8 @@ const CriptoPage = () => {
 
   return (
     <div className="cripto-page-container">
-      {cripto && <CriptoInfo cripto={cripto}/>}
-      {history && <CriptoHistory history={history}/>}
+      { cripto && <CriptoInfo cripto={cripto}/> }
+       {history && <CriptoHistory history={history}/> }
     </div>
   )
 }
