@@ -1,10 +1,10 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Menu.css";
 import { useContext} from "react";
 import { UserContext } from "../../context/UserContext";
 const Menu = () => {
 
-
+    const navigation = useNavigate();
     const usuario = useContext(UserContext);
 
     return (
@@ -22,9 +22,12 @@ const Menu = () => {
             {/*Para un menu principal se debe hacer uso del componente NavLink*/}
 
             <li><NavLink to="/">Inicio</NavLink></li>
-            <li><NavLink to="/asddasasd">Error404</NavLink></li>
             <li><NavLink to="/criptomonedas">Lista de Criptos</NavLink></li>
             <li><NavLink to="/perfil">Perfil de {usuario.name}</NavLink></li>
+            <li><a onClick={() => {
+                localStorage.removeItem("tokenReyesWorks");
+                navigation("/login")
+            }}>Cerrar sesion</a></li>
             
         </ul>
        </nav> 

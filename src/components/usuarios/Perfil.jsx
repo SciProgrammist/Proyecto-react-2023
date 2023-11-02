@@ -9,7 +9,7 @@ const Perfil = () => {
     return (
         <div className="perfil-usuario">
             <h3>Perfil del {usuario.name}</h3>
-            <h4>Soy un ingeniero apasionado por la tecnologia</h4>
+            <h4>Soy un ingeniero en ciencias de la computacion <br />apasionado por la tecnologia.</h4>
             <h5>
                 Usuario desde: {usuario.registered}
             </h5>
