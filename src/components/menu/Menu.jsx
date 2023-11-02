@@ -27,7 +27,7 @@ const Menu = () => {
             <li><a onClick={() => {
                 localStorage.removeItem("tokenReyesWorks");
                 navigation("/login")
-            }}>Cerrar sesion</a></li>
+            }}>{localStorage.getItem("tokenReyesWorks") ? "Cerrar sesion" : "Iniciar Sesion"}</a></li>
             
         </ul>
        </nav> 

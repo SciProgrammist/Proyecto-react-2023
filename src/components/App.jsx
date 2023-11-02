@@ -2,7 +2,7 @@ import { Navigate, Outlet } from "react-router-dom"
 import Menu from "./menu/Menu"
 const App = () => {
 
-    if (!localStorage.getItem("tokenReyesWorks")) return <Navigate to="/login" />
+    //if (!localStorage.getItem("tokenReyesWorks")) return <Navigate to="/login" />
     return (
         <>
           <Menu />
